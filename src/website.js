@@ -27,7 +27,7 @@ class App extends Component {
               <img className="instagram-icon" src={"https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2000px-Instagram_logo_2016.svg.png"}
                    alt={"instagram"}/>
             </a>
-            <a href={"src/William Zhao Resume .pdf"}>
+            <a href={"https://drive.google.com/file/d/1AAODUwqiHghmOLazl6QJYDnvUeArs3hw/view?usp=sharing"}>
               <img className="resume-icon" src={"http://www.clker.com/cliparts/f/H/5/a/Q/y/text-file-icon-hi.png"} alt={"resume"}/>
             </a>
             <a href={"mailto:william.zhao@vanderbilt.edu"}>
