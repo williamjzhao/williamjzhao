@@ -27,9 +27,9 @@ class App extends Component {
               <img className="instagram-icon" src={"https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2000px-Instagram_logo_2016.svg.png"}
                    alt={"instagram"}/>
             </a>
-
-            <img className="resume-icon" src={"http://www.clker.com/cliparts/f/H/5/a/Q/y/text-file-icon-hi.png"} alt={"resume"}/>
-
+            <a href={"William Zhao Resume.pdf"}>
+              <img className="resume-icon" src={"http://www.clker.com/cliparts/f/H/5/a/Q/y/text-file-icon-hi.png"} alt={"resume"}/>
+            </a>
             <a href={"mailto:william.zhao@vanderbilt.edu"}>
               <img className="email-icon" src={"http://pngimages.net/sites/default/files/mail-png-image-71391.png"} alt={"email"}/>
             </a>
