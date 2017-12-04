@@ -9,7 +9,6 @@ class App extends Component {
   render() {
 		return (
       <div className="App">
-        <Button ref={Math.random()}/>
         <header className="name-header">
 					<link href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:300,400,500,600" rel="stylesheet"/>
           <h1 className="name-title">Hey! I'm William Zhao.</h1>
