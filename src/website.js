@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './style.css';
+import ReactDOM from 'react-dom';
+
+let FontAwesome = require('react-fontawesome');
 
 class App extends Component {
-  render() {
 
-    return (
+  render() {
+		return (
       <div className="App">
+        <Button ref={Math.random()}/>
         <header className="name-header">
 					<link href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:300,400,500,600" rel="stylesheet"/>
           <h1 className="name-title">Hey! I'm William Zhao.</h1>
@@ -30,14 +33,32 @@ class App extends Component {
             <a href={"https://drive.google.com/file/d/1AAODUwqiHghmOLazl6QJYDnvUeArs3hw/view?usp=sharing"}>
               <img className="resume-icon" src={"http://www.clker.com/cliparts/f/H/5/a/Q/y/text-file-icon-hi.png"} alt={"resume"}/>
             </a>
+
             <a href={"mailto:william.zhao@vanderbilt.edu"}>
               <img className="email-icon" src={"http://pngimages.net/sites/default/files/mail-png-image-71391.png"} alt={"email"}/>
             </a>
+						<FontAwesome
+							className='super-crazy-colors'
+							name='rocket'
+							size='2x'
+							spin
+							style={{ textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)' }}
+						/>
           </div>
         </body>
       </div>
     );
   }
+}
+
+class Button extends Component{
+  render() {
+		return (
+			<div>
+				<button>{this.props.ref}</button>
+			</div>
+		)
+	}
 }
 
 export default App;
