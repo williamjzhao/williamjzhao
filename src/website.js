@@ -36,13 +36,6 @@ class App extends Component {
             <a href={"mailto:william.zhao@vanderbilt.edu"}>
               <img className="email-icon" src={"http://pngimages.net/sites/default/files/mail-png-image-71391.png"} alt={"email"}/>
             </a>
-						<FontAwesome
-							className='super-crazy-colors'
-							name='rocket'
-							size='5x'
-							spin
-							style={{ textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)' }}
-						/>
           </div>
         </body>
       </div>
@@ -59,6 +52,7 @@ class Button extends Component{
 		)
 	}
 }
+
 
 
 export default App;
