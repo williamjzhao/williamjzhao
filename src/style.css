@@ -25,15 +25,22 @@ body p{
 }
 
 .icon-container img{
-  width: 50px;
-  height: 50px;
+  width: 100%;
   opacity: .5;
   margin-left:20px;
   margin-right:20px;
 }
 
+.icon-container img{
+    width: 80px;
+}
+
 .icon-container:hover img:hover {
   opacity: 1;
+}
+
+@keyframes fade-in{
+
 }
 
 

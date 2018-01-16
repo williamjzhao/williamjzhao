@@ -30,7 +30,7 @@ class App extends Component {
                    alt={"instagram"}/>
             </a>
             <a href={"https://drive.google.com/file/d/1AAODUwqiHghmOLazl6QJYDnvUeArs3hw/view?usp=sharing"}>
-              <img className="resume-icon" src={"http://www.clker.com/cliparts/f/H/5/a/Q/y/text-file-icon-hi.png"} alt={"resume"}/>
+              <img className="resume-icon" src={"http://www.free-icons-download.net/images/document-icon-23076.png"} alt={"resume"}/>
             </a>
 
             <a href={"mailto:william.zhao@vanderbilt.edu"}>
