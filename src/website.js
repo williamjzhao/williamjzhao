@@ -29,7 +29,7 @@ class App extends Component {
               <img className="instagram-icon" src={"https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2000px-Instagram_logo_2016.svg.png"}
                    alt={"instagram"}/>
             </a>
-            <a href={"https://drive.google.com/file/d/14ncc81s437D3Cg_Dort2_0gtUR50Y6zl/view?usp=sharing"}>
+            <a href={"https://drive.google.com/file/d/1-xUc6I8XZoz4aHo2hGJU1Gk7PQJDZeH4/view?usp=sharing"}>
               <img className="resume-icon" src={"http://www.free-icons-download.net/images/document-icon-23076.png"} alt={"resume"}/>
             </a>
 
