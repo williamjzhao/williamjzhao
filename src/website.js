@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 
 let FontAwesome = require('react-fontawesome');
 
-class App extends Component {
+class Website extends Component {
 
   render() {
 		return (
@@ -44,4 +44,4 @@ class App extends Component {
 }
 
 
-export default App;
+export default Website;
