@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class Login extends Component {
 
     componentDidMount(){
-        gapi.signin2.render('g-signin2', {
+        window.gapi.signin2.render('g-signin2', {
           'scope': 'https://www.googleapis.com/auth/plus.login',
           'width': 200,
           'height': 50,
