@@ -12,7 +12,7 @@ class Login extends Component {
     render() {
         return (
             <div>
-                <div class="g-signin2" data-onsuccess="onSignIn"></div>
+                <div class="g-signin2" data-onsuccess="onSignIn">Sign in</div>
                 <h1>Should work and console log after print</h1>
             </div>
         )
