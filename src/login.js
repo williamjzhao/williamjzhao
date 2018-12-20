@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
 class Login extends Component {
-
     componentDidMount(){
         console.log("mounted")
         window.gapi.signin2.render('g-signin2', {
