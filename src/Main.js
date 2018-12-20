@@ -6,12 +6,12 @@ import Login from './login'
 class Main extends Component {
     render() {
         return(
-            <main>
+            <div>
                 <Switch>
                     <Route exact path='/' component={Website} />
                     <Route path='/login' component={Login} />
                 </Switch>
-            </main>
+            </div>
         )
     }
 }
