@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Switch, Route } from 'react-router-dom';
-import Website from './Website'
+import Website from './website'
 import Login from './Login'
 
 class Main extends Component {

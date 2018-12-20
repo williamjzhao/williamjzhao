@@ -44,4 +44,4 @@ class Website extends Component {
 }
 
 
-export default Website
+export default Website;
