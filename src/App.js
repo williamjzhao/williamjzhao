@@ -4,8 +4,10 @@ import Header from './Header'
 class App extends Component {
   render() {
     return (
-        <Header />
-        <Main />
+        <div>
+            <Header />
+            <Main />
+        </div>
     )
   }
 }
