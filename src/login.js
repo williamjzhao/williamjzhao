@@ -2,6 +2,16 @@ import React, { Component } from 'react';
 
 class Login extends Component {
 
+    componentDidMount = () => {
+        window.gapi.signin2.render('g-signin2', {
+          'scope': 'https://www.googleapis.com/auth/plus.login',
+          'width': 200,
+          'height': 50,
+          'longtitle': true,
+          'onsuccess': this.onSignIn
+        });  
+    }
+
     onSignIn = (googleUser) => {
         let profile = googleUser.getBasicProfile();
         console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
@@ -12,7 +22,7 @@ class Login extends Component {
     render() {
         return (
             <div>
-                <div class="g-signin2" data-onsuccess="onSignIn">Sign in</div>
+                <div class="g-signin2" data-onsuccess={this.onSignIn}>Sign in</div>
                 <h1>Should work and console log after print</h1>
             </div>
         )
