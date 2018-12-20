@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class loginTest extends Component {
+class Login extends Component {
 
     onSignIn = (googleUser) => {
         let profile = googleUser.getBasicProfile();
@@ -19,4 +19,4 @@ class loginTest extends Component {
     }
 }
 
-export default loginTest
+export default Login
