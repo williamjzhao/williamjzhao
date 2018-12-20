@@ -11,6 +11,10 @@ class Login extends Component {
           'longtitle': true,
           'onsuccess': this.onSignIn
         });  
+
+        window.gapi.load('auth2', function() {
+            window.gapi.auth2.init();
+        });
     }
 
     onSignIn = (googleUser) => {
@@ -23,7 +27,7 @@ class Login extends Component {
     render() {
         return (
             <div>
-                <div class="g-signin2" data-onsuccess={this.onSignIn}></div>
+                <div id="g-signin2" data-onsuccess={this.onSignIn}></div>
                 <h1>Should work and console log after print</h1>
             </div>
         )
