@@ -18,6 +18,11 @@ class Login extends Component {
 
     onSignIn = (googleUser) => {
         let profile = googleUser.getBasicProfile();
+        let id_token = googleUser.getAuthResponse().id_token;
+        fetch('http://localhost:3001/auth', {
+            method: "POST",
+            body: id_token
+        }).then(response => response.json()).then(ok => console.log(ok));
         console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
         console.log('Name: ' + profile.getName());
         console.log('Image URL: ' + profile.getImageUrl());
