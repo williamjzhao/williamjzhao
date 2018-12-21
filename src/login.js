@@ -19,7 +19,7 @@ class Login extends Component {
     onSignIn = (googleUser) => {
         let profile = googleUser.getBasicProfile();
         let id_token = googleUser.getAuthResponse().id_token;
-        console.log(id_token);
+        console.log(id_token + 'ok');
         fetch('http://localhost:3001/auth', {
             method: "POST",
             body: id_token
