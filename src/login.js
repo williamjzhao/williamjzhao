@@ -23,7 +23,7 @@ class Login extends Component {
         fetch('http://localhost:3001/auth', {
             method: "POST",
             body: id_token
-        }).catch(console.log(err)).then(console.log('not'));
+        }).catch(console.error).then(console.log('not'));
         console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
         console.log('Name: ' + profile.getName());
         console.log('Image URL: ' + profile.getImageUrl());
