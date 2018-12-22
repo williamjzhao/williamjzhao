@@ -17,7 +17,6 @@ class Login extends Component {
     }
 
     authenicate = async (id_token) => {
-        console.log('id_token is ' + id_token);
         const response = await fetch('http://localhost:3001/auth', {
             method: "POST",
             mode: "cors",
