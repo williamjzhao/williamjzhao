@@ -28,10 +28,10 @@ class Login extends Component {
         return body;
     }
 
-    onSignIn = (googleUser) => {
+    onSignIn = async (googleUser) => {
         let profile = googleUser.getBasicProfile();
-        let id_token = googleUser.getAuthResponse().id_token;
-        this.authenicate(id_token);
+        let id_token = await googleUser.getAuthResponse().id_token;
+        await this.authenicate(id_token);
         console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
         console.log('Name: ' + profile.getName());
         console.log('Image URL: ' + profile.getImageUrl());
