@@ -26,7 +26,7 @@ class Login extends Component {
                 "Content-Type": "application/x-www-form-urlencoded",
             },
         });
-        const body = await response.json();
+        await response.json();
         if (response.status !== 200) {
             throw Error(body.message) 
         }
