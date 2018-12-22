@@ -16,17 +16,22 @@ class Login extends Component {
         });
     }
 
-    authenicate = async () => {
-
+    authenicate = async (id_token) => {
+        const response = await fetch('http://localhost:3001/auth', {
+            method: "POST",
+            body: id_token
+        });
+        const body = await response.json();
+        if (response.status !== 200) {
+            throw Error(body.message) 
+        }
+        return body;
     }
 
     onSignIn = (googleUser) => {
         let profile = googleUser.getBasicProfile();
         let id_token = await googleUser.getAuthResponse().id_token;
-        fetch('http://localhost:3001/auth', {
-            method: "POST",
-            body: id_token
-        }).catch(console.error);
+        await this.authenicate(id_token);
         console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
         console.log('Name: ' + profile.getName());
         console.log('Image URL: ' + profile.getImageUrl());
