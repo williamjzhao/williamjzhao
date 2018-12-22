@@ -19,6 +19,7 @@ class Login extends Component {
     authenicate = async (id_token) => {
         const response = await fetch('http://localhost:3001/auth', {
             method: "POST",
+            mode: "cors",
             body: id_token
         });
         const body = await response.json();
@@ -31,6 +32,7 @@ class Login extends Component {
     onSignIn = async (googleUser) => {
         let profile = googleUser.getBasicProfile();
         let id_token = await googleUser.getAuthResponse().id_token;
+        console.log(id_token);
         await this.authenicate(id_token);
         console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
         console.log('Name: ' + profile.getName());
