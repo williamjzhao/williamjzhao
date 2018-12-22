@@ -21,7 +21,7 @@ class Login extends Component {
         const response = await fetch('http://localhost:3001/auth', {
             method: "POST",
             mode: "cors",
-            body: JSON.stringify(id_token),
+            body: id_token,
             headers: {
                 "Content-Type": "application/json",
                 "Content-Type": "application/x-www-form-urlencoded",
