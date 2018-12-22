@@ -17,10 +17,15 @@ class Login extends Component {
     }
 
     authenicate = async (id_token) => {
+        console.log('id_token is ' + id_token);
         const response = await fetch('http://localhost:3001/auth', {
             method: "POST",
             mode: "cors",
-            body: id_token
+            body: JSON.stringify(id_token),
+            headers: {
+                "Content-Type": "application/json",
+                "Content-Type": "application/x-www-form-urlencoded",
+            },
         });
         const body = await response.json();
         if (response.status !== 200) {
