@@ -89,7 +89,7 @@ class Login extends Component {
                 name: profile.getName(),
                 email: email
             }
-            const add = this.addUser(user)
+            const add = this.addUser(JSON.stringify(user));
             console.log(add);
         }
 
