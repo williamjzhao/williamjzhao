@@ -86,8 +86,8 @@ class Login extends Component {
             console.log(find);
         } else {
             const user = {
-                name: profile.getName(),
-                email: email
+                "name": profile.getName(),
+                "email": email
             }
             const add = this.addUser(JSON.stringify(user));
             console.log(add);
