@@ -16,6 +16,47 @@ class Login extends Component {
         });
     }
 
+    addUser = async (user) => {
+        const response = await fetch('http://localhost:3001/add', {
+            method: "POST",
+            mode: "cors",
+            body: user,
+            headers: {
+                "Content-Type": "application/json",
+                "Content-Type": "application/x-www-form-urlencoded",
+            },
+        });
+        const body = await response.json();
+        return body;
+    }
+
+    findUser = async (email) => {
+        const response = await fetch(`http://localhost:3001/find/${email}`, {
+            method: "GET",
+            mode: "cors",
+            headers: {
+                "Content-Type": "application/json",
+                "Content-Type": "application/x-www-form-urlencoded",
+            },
+        });
+        const body = await response.json();
+        console.log('find ' + body);
+        return body;
+    }
+
+    checkEmail = async (email) => {
+        const response = await fetch(`http://localhost:3001/check/${email}`, {
+            method: "GET",
+            mode: "cors",
+            headers: {
+                "Content-Type": "application/json",
+                "Content-Type": "application/x-www-form-urlencoded",
+            },
+        });
+        const body = await response.json();
+        return body;
+    }
+
     authenicate = async (id_token) => {
         const response = await fetch('http://localhost:3001/auth', {
             method: "POST",
@@ -38,6 +79,20 @@ class Login extends Component {
         let profile = googleUser.getBasicProfile();
         let id_token = await googleUser.getAuthResponse().id_token;
         await this.authenicate(id_token);
+        const email = profile.getEmail();
+        let exist = await this.checkEmail(email);
+        if(exist.bool) {
+            const find = this.findUser(email);
+            console.log(find);
+        } else {
+            const user = {
+                name: profile.getName(),
+                email: email
+            }
+            const add = this.addUser(user)
+            console.log(add);
+        }
+
         console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
         console.log('Name: ' + profile.getName());
         console.log('Image URL: ' + profile.getImageUrl());
