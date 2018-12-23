@@ -81,6 +81,8 @@ class Login extends Component {
         await this.authenicate(id_token);
         const email = profile.getEmail();
         let exist = await this.checkEmail(email);
+        console.log(exist)
+        console.log(exist.bool);
         if(exist.bool) {
             const find = this.findUser(email);
             console.log(find);
