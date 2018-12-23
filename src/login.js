@@ -40,7 +40,6 @@ class Login extends Component {
             },
         });
         const body = await response.json();
-        console.log('find ' + body);
         return body;
     }
 
@@ -81,18 +80,14 @@ class Login extends Component {
         await this.authenicate(id_token);
         const email = profile.getEmail();
         let exist = await this.checkEmail(email);
-        console.log(exist)
-        console.log(exist.bool);
         if(exist.bool) {
             const find = this.findUser(email);
-            console.log(find);
         } else {
             const user = {
                 "name": profile.getName(),
                 "email": email
             }
             const add = this.addUser(JSON.stringify(user));
-            console.log(add);
         }
 
         console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
