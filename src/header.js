@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Typing from 'react-typing-animation';
-import './website_v2.css';
+import './header.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import computer from './assets/computer.png'
 import basketball from './assets/basketball.png'
@@ -27,29 +27,33 @@ class header extends Component {
         //     icon = <FontAwesomeIcon icon="angle-down" />;
         // }
         return(
-            <div>
-                <Typing hideCursor="true" speed={50}>
-                    <div id='intro'>
-                        <span>{this.state.intro}</span>
-                    </div>
-                    <div className='typer'>
-                        <Typing.Delay ms={100}/>
-                        <Typing.Speed ms={12} />
-                        <FontAwesomeIcon icon="hand-point-right"/> 
-                        {this.state.lines[0]}
-                    </div>
-                    <div className='typer'>
-                        <Typing.Delay ms={150}/>
-                        <FontAwesomeIcon icon="hand-point-right"/> 
-                        {this.state.lines[1]} {comp} 
-                        {this.state.lines[2]} {bball} 
-                    </div>
-                    <div className='typer'>
-                        <Typing.Delay ms={200}/>
-                        <FontAwesomeIcon icon="hand-point-right"/> 
-                        {this.state.lines[3]}
-                    </div>
-                </Typing>
+            <div id="bground">
+                <div id="words">
+                    <Typing hideCursor="true" speed={50}>
+                        <div id="details">
+                            <div id='intro'>
+                                <span>{this.state.intro}</span>
+                            </div>
+                            <div className='typer'>
+                                <Typing.Delay ms={100}/>
+                                <Typing.Speed ms={12} />
+                                <FontAwesomeIcon icon="hand-point-right"/> 
+                                {this.state.lines[0]}
+                            </div>
+                            <div className='typer'>
+                                <Typing.Delay ms={150}/>
+                                <FontAwesomeIcon icon="hand-point-right"/> 
+                                {this.state.lines[1]} {comp} 
+                                {this.state.lines[2]} {bball} 
+                            </div>
+                            <div className='typer'>
+                                <Typing.Delay ms={200}/>
+                                <FontAwesomeIcon icon="hand-point-right"/> 
+                                {this.state.lines[3]}
+                            </div>
+                        </div>
+                    </Typing>
+                </div>
 
                 <div id="downarrow">
                     {this.handleArrow()}
