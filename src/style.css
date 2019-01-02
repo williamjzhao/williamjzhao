@@ -1,7 +1,11 @@
 .App {
   text-align: center;
   font-family: 'Barlow Semi Condensed', sans-serif;
-  margin: 0;
+  margin: 20px;
+}
+
+.App * {
+  margin: 15px;
 }
 
 .name-header {
