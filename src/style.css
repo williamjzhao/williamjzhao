@@ -1,7 +1,6 @@
 .App {
   text-align: center;
   font-family: 'Barlow Semi Condensed', sans-serif;
-  margin: 20px;
 }
 
 .App * {
@@ -9,8 +8,6 @@
 }
 
 .name-header {
-  top: 40%;
-  width: 100%;
   left: 0;
   margin-top:150px;
   line-height: 80px;
@@ -44,8 +41,38 @@ body p{
   opacity: 1;
 }
 
-@keyframes fade-in{
+@media only screen and (max-width: 800px) {
+  .App {
+    margin: 0;
+    width: 100%;
+    padding: 0;
+  }
+  .name-header {
+    left: 0;
+    margin-top:50px;
+    line-height: 80px;
+  }
+  .name-title {
+    margin: auto auto;
+    font-size: 35px;
+    font-weight: 500;
+  }
+  .intro {
+    font-size: 30px;
+  }
+  .icon-container {
+    width: auto;
+  }
 
+  .icon-container :first-child {
+    margin-left: 0;
+  }
+  .icon-container img {
+    margin: 15px;
+    margin-top: 10px;
+    width: 50px;
+    height: 50px;
+  }
 }
 
 
