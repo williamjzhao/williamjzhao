@@ -3,3 +3,13 @@
     justify-content: center;
     background: gray;
 }
+
+@media only screen and (max-width: 800px) {
+    .resume {
+        display: flex;
+        justify-content: center;
+        background: gray;
+        width: 800px;
+        height:auto;
+    }
+}
