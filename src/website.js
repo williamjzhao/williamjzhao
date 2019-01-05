@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './style.css';
 import ReactDOM from 'react-dom';
+import { Link } from 'react-router-dom';
 
 let FontAwesome = require('react-fontawesome');
 
@@ -29,9 +30,9 @@ class Website extends Component {
               <img className="instagram-icon" src={"https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2000px-Instagram_logo_2016.svg.png"}
                    alt={"instagram"}/>
             </a>
-            <a href={"/resume"}>
+            <Link to="/resume">
               <img className="resume-icon" src={"http://www.free-icons-download.net/images/document-icon-23076.png"} alt={"resume"}/>
-            </a>
+            </Link>
 
             <a href={"mailto:william.zhao@vanderbilt.edu"}>
               <img className="email-icon" src={"http://pngimages.net/sites/default/files/mail-png-image-71391.png"} alt={"email"}/>
